@@ -118,8 +118,8 @@ public class Repulo {
         return fesztav;
     }
 
-    public void setKerek_atmero(int kerek_atmero) {
-        this.fesztav = kerek_atmero;
+    public void setFesztav(int fesztav) {
+        this.fesztav = fesztav;
     }
 
     public int getEvjarat() {
@@ -160,7 +160,7 @@ public class Repulo {
                 ", suly=" + suly +
                 ", hajtomuvek_szama=" + hajtomuvek_szama +
                 ", ulesek_szama=" + ulesek_szama +
-                ", kerek_atmero=" + fesztav +
+                ", fesztav=" + fesztav +
                 ", evjarat=" + evjarat +
                 ", szinkod='" + szin + '\'' +
                 ", allapot=" + allapot +
