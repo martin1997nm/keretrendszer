@@ -18,7 +18,7 @@ public class RepuloDAOJSONTest {
     public void test() {
         RepuloDAO dao = new RepuloDAOJSON("src/main/resources/jsonfile.json");
         try {
-            Repulo repulo = new Repulo("Boeing","737","N12345",LocalDate.of(1998, 10, 11),1300,50000,2,280,34,1998,"#FFFFFF", Allapot.MEGKIMELT);
+            Repulo repulo = new Repulo("Boeing","737","N12345",LocalDate.of(1998, 10, 11),1300,50000,2,280,34,1998,"#FFFFFF", Allapot.RONCS);
             dao.insertRepulo(repulo);
             System.out.println(dao.readAllRepulo());
         } catch (RosszDatum rosszDatum) {

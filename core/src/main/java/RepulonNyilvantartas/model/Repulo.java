@@ -151,7 +151,7 @@ public class Repulo {
 
     @Override
     public String toString() {
-        return "Repulo{" +
+        return "repulo{" +
                 "gyarto='" + gyarto + '\'' +
                 ", tipus='" + tipus + '\'' +
                 ", nszam='" + nszam + '\'' +
@@ -160,7 +160,7 @@ public class Repulo {
                 ", suly=" + suly +
                 ", hajtomuvek_szama=" + hajtomuvek_szama +
                 ", ulesek_szama=" + ulesek_szama +
-                ", kerek_atmero=" + fesztav +
+                ", fesztav=" + fesztav +
                 ", evjarat=" + evjarat +
                 ", szinkod='" + szin + '\'' +
                 ", allapot=" + allapot +

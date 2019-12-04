@@ -31,7 +31,7 @@ public class RepuloController {
         return String.valueOf(service.listAllRepulo().size());
     }
 
-    @RequestMapping(value = "/getRepuloData/{Nszam}")
+    @RequestMapping(value = "/getRepuloData/{nszam}")
     @ResponseBody
     public Repulo getRepuloByNszam(@PathVariable(value = "nszam") String nszam) throws RepuloNemTalalhato, RosszNszam {
 
@@ -63,6 +63,7 @@ public class RepuloController {
     public void updateRepulo(@RequestBody Repulo repulo) throws RepuloNemTalalhato {
         service.updateRepulo(repulo);
     }
+
 
 
 }
