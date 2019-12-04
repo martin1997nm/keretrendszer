@@ -67,10 +67,10 @@ public class RepuloDAOJSON implements RepuloDAO {
         catch (RosszNszam rosszNszam) {
             throw rosszNszam;
         }
-        Collection<Repulo> autos = readAllRepulo();
-        for(Repulo auto: autos){
-            if (auto.getNszam().equalsIgnoreCase(nszam)){
-                return auto;
+        Collection<Repulo> repulos = readAllRepulo();
+        for(Repulo repulo: repulos){
+            if (repulo.getNszam().equalsIgnoreCase(nszam)){
+                return repulo;
             }
         }
         throw new RepuloNemTalalhato();
@@ -83,10 +83,10 @@ public class RepuloDAOJSON implements RepuloDAO {
             readRepulo(repulo.getNszam());
             throw new NSzamMarLetezik(repulo.getNszam());
         } catch (RepuloNemTalalhato repuloNemTalalhato) {
-            Collection<Repulo> autos = readAllRepulo();
-            autos.add(repulo);
+            Collection<Repulo> repulos = readAllRepulo();
+            repulos.add(repulo);
             try {
-                mapper.writeValue(jsonfile, autos);
+                mapper.writeValue(jsonfile, repulos);
             } catch (IOException e) {
                 e.printStackTrace();
             }

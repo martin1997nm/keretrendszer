@@ -14,7 +14,7 @@ public interface RepuloService {
 
     public void deleteRepulo(Repulo repulo) throws RepuloNemTalalhato;
 
-    public Collection<Repulo> listAllAutosByManufacturer(String manufacturer);
+    public Collection<Repulo> listAllRepuloByManufacturer(String manufacturer);
 
 
     public void updateRepulo(Repulo repulo) throws RepuloNemTalalhato;

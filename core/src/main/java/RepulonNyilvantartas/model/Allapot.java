@@ -1,6 +1,6 @@
 package RepulonNyilvantartas.model;
 
 public enum Allapot {
-    KORSZERU, HAJTOMUHIBAS, ELAVULT,ANYAGFARADASOS,
-   ,ATLAGOS, HIANYOS
+    RONCS, MEGKIMELT, UJSZERU,
+    SERULT, NORMAL, HIANYOS,HIBAS
 }

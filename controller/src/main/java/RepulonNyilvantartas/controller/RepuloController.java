@@ -1,6 +1,10 @@
 package RepulonNyilvantartas.controller;
 
-import RepulonNyilvantartas.exceptions.*;
+import RepulonNyilvantartas.exceptions.NSzamMarLetezik;
+import RepulonNyilvantartas.exceptions.RepuloNemTalalhato;
+import RepulonNyilvantartas.exceptions.RosszDatum;
+import RepulonNyilvantartas.exceptions.RosszEvjarat;
+import RepulonNyilvantartas.exceptions.RosszNszam;
 import RepulonNyilvantartas.model.Repulo;
 import RepulonNyilvantartas.service.RepuloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
+@Controller
 public class RepuloController {
     RepuloService service;
 

@@ -38,7 +38,7 @@ public class RepuloServiceImpl implements RepuloService {
 
     }
 
-    public Collection<Repulo> listAllAutosByManufacturer(String manufacturer) {
+    public Collection<Repulo> listAllRepuloByManufacturer(String manufacturer) {
         Collection<Repulo> allRepulo = dao.readAllRepulo();
 
         Collection<Repulo> result = new ArrayList<Repulo>();
