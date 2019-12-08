@@ -25,11 +25,7 @@ public class RepuloController {
 
 
 
-    @RequestMapping(value = "test")
-    @ResponseBody
-    public String testService(){
-        return String.valueOf(service.listAllRepulo().size());
-    }
+
 
     @RequestMapping(value = "/getRepuloData/{nszam}")
     @ResponseBody
@@ -38,7 +34,7 @@ public class RepuloController {
         return service.getNszam(nszam);
     }
 
-    @RequestMapping(value ="addRepulo", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value ="/addRepulo", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public void addRepulo(@RequestBody Repulo repulo) throws RosszDatum, RosszEvjarat, RosszNszam, NSzamMarLetezik {
         service.addRepulo(repulo);
@@ -63,6 +59,8 @@ public class RepuloController {
     public void updateRepulo(@RequestBody Repulo repulo) throws RepuloNemTalalhato {
         service.updateRepulo(repulo);
     }
+
+
 
 
 

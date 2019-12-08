@@ -14,7 +14,6 @@ public class Repulo {
     private LocalDate uzembehelyezes_datuma;
     private int teljesitmeny;
     private int suly;
-    private int ajtok_szama;
     private int hajtomuvek_szama;
     private int ulesek_szama;
     private int fesztav;
@@ -33,8 +32,8 @@ public class Repulo {
         setUzembehelyezes_datuma(uzembehelyezes_datuma);
         this.teljesitmeny = tejesitmeny;
         this.suly = suly;
-        this.ajtok_szama = hajtomuvek_szama;
-        this.hajtomuvek_szama = ulesek_szama;
+        this.hajtomuvek_szama = hajtomuvek_szama;
+        this.ulesek_szama = ulesek_szama;
         this.fesztav = fesztav;
         setEvjarat(evjarat);
         this.szin = szin;
@@ -102,7 +101,7 @@ public class Repulo {
         return hajtomuvek_szama;
     }
 
-    public void setHajtomuvek_szama(int ajtok_szama) {
+    public void setHajtomuvek_szama(int hajtomuvek_szama) {
         this.hajtomuvek_szama = hajtomuvek_szama;
     }
 
@@ -118,8 +117,8 @@ public class Repulo {
         return fesztav;
     }
 
-    public void setKerek_atmero(int kerek_atmero) {
-        this.fesztav = kerek_atmero;
+    public void setFesztav(int fesztav) {
+        this.fesztav = fesztav;
     }
 
     public int getEvjarat() {
@@ -174,7 +173,7 @@ public class Repulo {
         Repulo repulo = (Repulo) o;
         return teljesitmeny == repulo.teljesitmeny &&
                 suly == repulo.suly &&
-                ajtok_szama == repulo.ajtok_szama &&
+                hajtomuvek_szama == repulo.hajtomuvek_szama &&
                 ulesek_szama == repulo.ulesek_szama &&
                 fesztav == repulo.fesztav &&
                 evjarat == repulo.evjarat &&
@@ -188,6 +187,6 @@ public class Repulo {
 
     @Override
     public int hashCode() {
-        return Objects.hash(gyarto, tipus, nszam, uzembehelyezes_datuma, teljesitmeny, suly, ajtok_szama, ulesek_szama, fesztav, evjarat, szin, allapot);
+        return Objects.hash(gyarto, tipus, nszam, uzembehelyezes_datuma, teljesitmeny, suly, hajtomuvek_szama, ulesek_szama, fesztav, evjarat, szin, allapot);
     }
 }

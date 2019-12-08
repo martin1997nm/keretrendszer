@@ -15,7 +15,7 @@ public class ExceptionController {
     @ResponseBody
     @ResponseStatus(HttpStatus.IM_USED)
     public String duplikalt(NSzamMarLetezik e){
-        return e.getMessage()+", nem update kellene?"+e.toString();
+        return e.getMessage()+", frissíteni kellene a meglévő elemet "+e.toString();
 
     }
     @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
