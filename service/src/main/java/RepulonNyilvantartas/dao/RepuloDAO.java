@@ -4,7 +4,6 @@ import RepulonNyilvantartas.exceptions.RepuloNemTalalhato;
 import RepulonNyilvantartas.exceptions.NSzamMarLetezik;
 import RepulonNyilvantartas.exceptions.RosszNszam;
 import RepulonNyilvantartas.model.Repulo;
-import RepulonNyilvantartas.model.Repulo;
 
 import java.util.Collection;
 

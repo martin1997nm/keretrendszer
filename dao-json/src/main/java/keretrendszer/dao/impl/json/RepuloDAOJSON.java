@@ -5,7 +5,6 @@ import RepulonNyilvantartas.exceptions.NSzamMarLetezik;
 import RepulonNyilvantartas.exceptions.RepuloNemTalalhato;
 import RepulonNyilvantartas.exceptions.RosszNszam;
 import RepulonNyilvantartas.model.Repulo;
-import RepulonNyilvantartas.model.Repulo;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
