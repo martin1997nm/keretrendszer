@@ -17,5 +17,5 @@ public interface RepuloDAO {
 
     public void updateRepulo(Repulo repulo) throws RepuloNemTalalhato;
 
-    public void deleteRepulo(Repulo repulo) throws RepuloNemTalalhato;
+    public void deleteRepulo(Repulo nszam) throws RepuloNemTalalhato;
 }

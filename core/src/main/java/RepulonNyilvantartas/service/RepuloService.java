@@ -12,7 +12,7 @@ public interface RepuloService {
 
     public void addRepulo(Repulo repulo) throws RosszDatum, RosszEvjarat, RosszNszam, NSzamMarLetezik;
 
-    public void deleteRepulo(Repulo repulo) throws RepuloNemTalalhato;
+    public Repulo deleteRepulo(Repulo nszam) throws RepuloNemTalalhato;
 
     public Collection<Repulo> listAllRepuloByManufacturer(String manufacturer);
 

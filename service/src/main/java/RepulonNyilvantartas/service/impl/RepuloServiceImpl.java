@@ -7,7 +7,6 @@ import RepulonNyilvantartas.exceptions.RosszDatum;
 import RepulonNyilvantartas.exceptions.RosszEvjarat;
 import RepulonNyilvantartas.exceptions.RosszNszam;
 import RepulonNyilvantartas.model.Repulo;
-import RepulonNyilvantartas.model.Repulo;
 import RepulonNyilvantartas.service.RepuloService;
 
 import java.util.ArrayList;
@@ -33,9 +32,10 @@ public class RepuloServiceImpl implements RepuloService {
         dao.insertRepulo(repulo);
     }
 
-    public void deleteRepulo(Repulo repulo) throws RepuloNemTalalhato {
-        dao.deleteRepulo(repulo);
+    public Repulo deleteRepulo(Repulo nszam) throws RepuloNemTalalhato {
+        dao.deleteRepulo(nszam);
 
+        return nszam;
     }
 
     public Collection<Repulo> listAllRepuloByManufacturer(String manufacturer) {

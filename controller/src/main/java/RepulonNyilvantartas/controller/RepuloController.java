@@ -27,7 +27,7 @@ public class RepuloController {
 
 
 
-    @RequestMapping(value = "/getRepuloData/{nszam}")
+    @RequestMapping(value = "/getRepulo/{nszam}" , method = RequestMethod.POST)
     @ResponseBody
     public Repulo getRepuloByNszam(@PathVariable(value = "nszam") String nszam) throws RepuloNemTalalhato, RosszNszam {
 
@@ -41,14 +41,14 @@ public class RepuloController {
 
     }
 
-    @RequestMapping(value = "/listRepulo", method = RequestMethod.GET)
+    @RequestMapping(value = "/listRepulo", method = RequestMethod.POST)
     @ResponseBody
     public Collection<Repulo> listRepulo(){
         return service.listAllRepulo();
 
     }
 
-    @RequestMapping(value = "/deleteRepulo", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteRepulo", method = RequestMethod.POST)
     @ResponseBody
     public void deleteRepulo(@RequestBody Repulo repulo) throws RepuloNemTalalhato {
         service.deleteRepulo(repulo);

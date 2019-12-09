@@ -12,6 +12,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -73,6 +74,7 @@ public class RepuloDAOJSON implements RepuloDAO {
             }
         }
         throw new RepuloNemTalalhato();
+
 }
 
 
@@ -97,12 +99,12 @@ public class RepuloDAOJSON implements RepuloDAO {
     }
 
     public void updateRepulo(Repulo repulo) throws RepuloNemTalalhato {
-        Collection<Repulo> repulok = readAllRepulo();
+        Collection<Repulo> repulos = readAllRepulo();
         try {
             Repulo repulotorlendo = readRepulo(repulo.getNszam());
-            repulok.remove(repulotorlendo);
-            repulok.add(repulo);
-            mapper.writeValue(jsonfile, repulok);
+            repulos.remove(repulotorlendo);
+            repulos.add(repulo);
+            mapper.writeValue(jsonfile, repulos);
         } catch (RosszNszam rosszNszam) {
             rosszNszam.printStackTrace();
         } catch (RepuloNemTalalhato nem_talalhato){
@@ -119,10 +121,10 @@ public class RepuloDAOJSON implements RepuloDAO {
 
     }
 
-    public void deleteRepulo(Repulo auto) throws RepuloNemTalalhato {
+    public void deleteRepulo(Repulo repulo) throws RepuloNemTalalhato {
         Collection<Repulo> repulok = readAllRepulo();
         try {
-            Repulo repulotorlendo = readRepulo(auto.getNszam());
+            Repulo repulotorlendo = readRepulo(repulo.getNszam());
             repulok.remove(repulotorlendo);
             mapper.writeValue(jsonfile, repulok);
         } catch (RosszNszam rosszNszam) {
